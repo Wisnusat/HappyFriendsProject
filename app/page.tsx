@@ -1317,7 +1317,7 @@ export default function HomePage() {
                 </svg>
               </a>
               <a
-                href="https://www.tiktok.com/@happyfriendsproject"
+                href="https://www.tiktok.com/@happyfriendsprjct"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-purple-600 transition-colors"
