@@ -94,7 +94,7 @@ function YearbookModal({
 
   return (
     <div className="fixed inset-0 z-[99999] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-      <div className={relative ${getModalClasses()} w-full}>
+      <div className={`relative ${getModalClasses()} w-full`}>
         <button
           onClick={onClose}
           className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors z-10"
@@ -108,7 +108,7 @@ function YearbookModal({
             {/* Main content area */}
             <div className="relative">
               <div
-                className={relative ${getImageClasses()} rounded-xl overflow-hidden bg-white shadow-lg border-4 border-gray-200}
+                className={`relative ${getImageClasses()} rounded-xl overflow-hidden bg-white shadow-lg border-4 border-gray-200`}
               >
                 {type === "video" ? (
                   <div className="relative w-full h-full group cursor-pointer" onClick={openFullVideo}>
@@ -132,7 +132,7 @@ function YearbookModal({
                 ) : (
                   <img
                     src={images[currentIndex] || "/placeholder.svg"}
-                    alt={${title} ${currentIndex + 1}}
+                    alt={`${title} ${currentIndex + 1}`}
                     className="w-full h-full object-cover transition-all duration-1000 ease-in-out"
                   />
                 )}
@@ -261,7 +261,7 @@ function ServiceCarousel({
       <div className="relative h-40 rounded-xl overflow-hidden">
         <img
           src={images[currentIndex] || "/placeholder.svg"}
-          alt={${title} ${currentIndex + 1}}
+          alt={`${title} ${currentIndex + 1}`}
           className="w-full h-full object-cover transition-all duration-1000 ease-in-out cursor-pointer hover:scale-105"
           onClick={() => onImageClick && onImageClick(currentIndex)}
         />
@@ -338,8 +338,8 @@ function PortfolioCarousel({
       <div className="relative overflow-hidden rounded-2xl border-4 border-white shadow-lg">
         <img
           src={images[currentIndex] || "/placeholder.svg"}
-          alt={${title} ${currentIndex + 1}}
-          className={w-full ${height} object-cover transition-all duration-1000 ease-in-out cursor-pointer hover:scale-105}
+          alt={`${title} ${currentIndex + 1}`}
+          className={`w-full ${height} object-cover transition-all duration-1000 ease-in-out cursor-pointer hover:scale-105`}
           onClick={() => onImageClick && onImageClick(currentIndex)}
         />
 
@@ -565,7 +565,7 @@ export default function HomePage() {
   const openWhatsApp = () => {
     const phoneNumber = "628111224478"
     const message = "Mau nanya-nanya min soal Happy Friends Project"
-    const whatsappUrl = https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, "_blank")
   }
 
@@ -676,33 +676,33 @@ export default function HomePage() {
         <div
           className="absolute w-96 h-96 rounded-full blur-3xl"
           style={{
-            background: radial-gradient(circle, #FF1493, #FF69B4),
+            background: `radial-gradient(circle, #FF1493, #FF69B4)`,
             opacity: 0.1,
-            transform: translate(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px),
+            transform: `translate(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px)`,
           }}
         />
         <div
           className="absolute top-1/2 right-0 w-80 h-80 rounded-full blur-3xl"
           style={{
-            background: radial-gradient(circle, #00BFFF, #1E90FF),
+            background: `radial-gradient(circle, #00BFFF, #1E90FF)`,
             opacity: 0.08,
-            transform: translate(${mousePosition.x * -0.01}px, ${mousePosition.y * -0.01}px),
+            transform: `translate(${mousePosition.x * -0.01}px, ${mousePosition.y * -0.01}px)`,
           }}
         />
         <div
           className="absolute bottom-0 left-1/3 w-72 h-72 rounded-full blur-3xl"
           style={{
-            background: radial-gradient(circle, #FFD700, #FFA500),
+            background: `radial-gradient(circle, #FFD700, #FFA500)`,
             opacity: 0.1,
-            transform: translate(${mousePosition.x * 0.015}px, ${mousePosition.y * 0.015}px),
+            transform: `translate(${mousePosition.x * 0.015}px, ${mousePosition.y * 0.015}px)`,
           }}
         />
         <div
           className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full blur-3xl"
           style={{
-            background: radial-gradient(circle, #8A2BE2, #9370DB),
+            background: `radial-gradient(circle, #8A2BE2, #9370DB)`,
             opacity: 0.08,
-            transform: translate(${mousePosition.x * -0.02}px, ${mousePosition.y * 0.01}px),
+            transform: `translate(${mousePosition.x * -0.02}px, ${mousePosition.y * 0.01}px)`,
           }}
         />
         {/* HP Logo Silhouette Background */}
@@ -710,11 +710,11 @@ export default function HomePage() {
           <div
             className="w-96 h-96 opacity-5 transform rotate-12"
             style={{
-              backgroundImage: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hp-removebg-preview-mWbCO2m0mEnyTiYjULaSWk7YyKUTKs.png'),
+              backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hp-removebg-preview-mWbCO2m0mEnyTiYjULaSWk7YyKUTKs.png')`,
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
-              transform: rotate(12deg) translate(${mousePosition.x * 0.005}px, ${mousePosition.y * 0.005}px),
+              transform: `rotate(12deg) translate(${mousePosition.x * 0.005}px, ${mousePosition.y * 0.005}px)`,
             }}
           />
         </div>
@@ -902,7 +902,7 @@ export default function HomePage() {
               <p className="text-white text-lg mb-8 font-bold">For Your Lasting Memories</p>
 
               {/* Image container with white border */}
-              <div className="bg-white/10 rounded-2xl p-4 mb-8 border-4 border-white flex-grow">
+              <div className="bg-white/10 rounded-2xl p-4 mb-8 border-4 border-white">
                 <ServiceCarousel
                   images={yearbookImages}
                   title="Yearbook Design"
@@ -934,7 +934,7 @@ export default function HomePage() {
               <p className="text-white text-lg mb-8 font-bold">Memories crafted with love</p>
 
               {/* Image container */}
-              <div className="bg-white/10 rounded-2xl p-4 mb-8 border-4 border-white flex-grow">
+              <div className="bg-white/10 rounded-2xl p-4 mb-8 border-4 border-white">
                 <ServiceCarousel
                   images={photographyImages}
                   title="Photography"
@@ -1143,7 +1143,7 @@ export default function HomePage() {
                     >
                       <img
                         src={logo || "/placeholder.svg"}
-                        alt={Client ${(index % 10) + 1}}
+                        alt={`Client ${(index % 10) + 1}`}
                         className="w-12 h-12 object-contain opacity-70 hover:opacity-100 transition-opacity"
                       />
                     </div>
@@ -1162,7 +1162,7 @@ export default function HomePage() {
                     >
                       <img
                         src={logo || "/placeholder.svg"}
-                        alt={Client ${(index % 10) + 11}}
+                        alt={`Client ${(index % 10) + 11}`}
                         className="w-12 h-12 object-contain opacity-70 hover:opacity-100 transition-opacity"
                       />
                     </div>
@@ -1317,7 +1317,7 @@ export default function HomePage() {
                 </svg>
               </a>
               <a
-                href="https://www.tiktok.com/@happyfriendsprjct"
+                href="https://www.tiktok.com/@happyfriendsproject"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-purple-600 transition-colors"
